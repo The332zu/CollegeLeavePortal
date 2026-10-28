@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Leave Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>College Leave Portal</h1>
+    <button id="logoutBtn" class="hidden">Logout</button>
+  </header>
+
+  <main>
+    <!-- LOGIN -->
+    <section id="loginSection">
+      <h2>Login</h2>
+      <label>Username <input id="username" autocomplete="off"></label>
+      <label>Password <input id="password" type="password"></label>
+      <button id="loginBtn">Login</button>
+      <p id="loginError" class="error"></p>
+      <p class="hint">Demo users (password: pass123) — student1, student2, faculty1, hod1</p>
+    </section>
+
+    <!-- STUDENT DASHBOARD -->
+    <section id="studentDashboard" class="hidden">
+      <h2>Student Dashboard</h2>
+      <p>Leave balance: <strong id="leaveBalance">0</strong> days</p>
+
+      <h3>Apply for Leave</h3>
+      <form id="applyLeaveForm">
+        <label>Start Date <input type="date" id="startDate"></label>
+        <label>End Date <input type="date" id="endDate"></label>
+        <label>Reason <textarea id="reason" rows="3"></textarea></label>
+        <button type="submit" id="applyBtn">Apply</button>
+        <p id="applyError" class="error"></p>
+      </form>
+
+      <h3>My Leave Requests</h3>
+      <ul id="leaveList"></ul>
+    </section>
+
+    <!-- APPROVER DASHBOARD -->
+    <section id="approverDashboard" class="hidden">
+      <h2>Approver Dashboard</h2>
+      <p>Role: <strong id="approverRole"></strong></p>
+      <h3>Pending Requests</h3>
+      <ul id="pendingList"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
